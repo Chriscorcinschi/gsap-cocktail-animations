@@ -27,14 +27,14 @@ const Contact = () => {
                 yPercent: 100,
                 stagger: 0.02
             })
-            .to ('#f-left-leaf', {
-                y: '-50',
-                duration: 1,
+            .to ('#f-right-leaf', {
+                x: '50',
+                duration: 3,
                 ease: 'power1.inOut'
             })
             .to ('#f-left-leaf', {
-                y: '-50',
-                duration: 1,
+                y: '50',
+                duration: 2,
                 ease: 'power1.inOut'
             }, '<')
     })
