@@ -3,7 +3,9 @@ import gsap from "gsap";
 import { SplitText } from "gsap/all";
 import { useRef } from "react";
 import { useMediaQuery } from "react-responsive";
-
+import leftLeaf from "/images/hero-left-leaf.png";
+import rightLeaf from "/images/hero-right-leaf.png"
+import videoSrc from "/videos/output.mp4"
 
 const Hero = () => {
     const videoRef = useRef();
@@ -74,12 +76,12 @@ const Hero = () => {
             <h1 className="title uppercase">mojito</h1>
 
             <img 
-                src="/images/hero-left-leaf.png" 
+                src={leftLeaf} 
                 alt="left-leaf"
                 className="left-leaf"/>
 
             <img 
-                src="/images/hero-right-leaf.png" 
+                src={rightLeaf} 
                 alt="right-leaf"
                 className="right-leaf"/>
 
@@ -104,7 +106,7 @@ const Hero = () => {
     <div className="video absolute inset-0">
         <video 
             ref={videoRef}
-            src="/videos/output.mp4"
+            src={videoSrc}
             muted
             playsInline
             preload="auto"

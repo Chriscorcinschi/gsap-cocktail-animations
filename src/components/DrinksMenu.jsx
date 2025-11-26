@@ -2,7 +2,10 @@ import { useRef, useState } from "react";
 import { allCocktails } from "../../constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-
+import leftLeaf from "/images/slider-left-leaf.png";
+import rightLeaf from "/images/slider-right-leaf.png";
+import rightArrow from "/images/right-arrow.png" ;
+import leftArrow from "/images/left-arrow.png";
 
 const DrinksMenu = () => {
   const contentRef = useRef();
@@ -70,12 +73,12 @@ useGSAP(()=>{
       aria-labelledby="drinksmenu-heading">
       
         <img 
-          src="/images/slider-left-leaf.png" 
+          src={leftLeaf}
           alt="left-leaf" 
           id="dm-left-leaf" />
 
         <img 
-          src="/images/slider-right-leaf.png" 
+          src={rightLeaf} 
           alt="right-leaf" 
           id="dm-right-leaf" />
 
@@ -114,7 +117,7 @@ useGSAP(()=>{
                 onClick={() => goToSlide(currentIndex - 1)}>
                   <span>{prevCocktail.name}</span>
                   <img 
-                      src="/images/right-arrow.png" 
+                      src={rightArrow}
                       alt="right-arrow" 
                       aria-hidden="true" />
               </button>
@@ -124,7 +127,7 @@ useGSAP(()=>{
                 onClick={() => goToSlide(currentIndex + 1)}>
                 <span>{nextCocktail.name}</span>
                 <img 
-                    src="/images/left-arrow.png" 
+                    src={leftArrow} 
                     alt="left-arrow" 
                     aria-hidden="true" />
               </button>

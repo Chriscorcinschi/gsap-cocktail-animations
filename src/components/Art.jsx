@@ -2,7 +2,8 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useMediaQuery } from "react-responsive";
 import { featureLists, goodLists } from  '../../constants/index.js'
-;
+import check from "/images/check.png" 
+import underImg from "/images/under-img.jpg";
 
 const Art = () => {
 
@@ -54,7 +55,7 @@ const Art = () => {
                     key={index} 
                     className="flex items-center gap-2">
                         <img 
-                            src="/images/check.png" 
+                            src={check} 
                             alt="check" />
                         <p>{feature}</p>
                 </li>
@@ -63,7 +64,7 @@ const Art = () => {
             
             <div className="cocktail-img">
                 <img
-                    src="/images/under-img.jpg"
+                    src={underImg}
                     alt="cocktail"
                     className="abs-center masked-img size-full object-contain"
                 />
@@ -75,7 +76,7 @@ const Art = () => {
                     key={index} 
                     className="flex items-center justify-start gap-2">
                         <img 
-                        src="/images/check.png" 
+                        src={check}
                         alt="check" />
                         <p className="md:w-fit w-60">{feature}</p>
                 </li>
